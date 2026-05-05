@@ -1,3 +1,5 @@
+//hanya untuk 1 mc (node 1 & timbangan3)
+
 #include <WiFi.h>
 #include <esp_now.h>
 
