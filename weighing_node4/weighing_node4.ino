@@ -1,4 +1,4 @@
-//timbangan mc2
+///timbangan mc2
 
 #include <WiFi.h>
 #include <esp_now.h>
