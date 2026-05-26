@@ -1,4 +1,4 @@
-# 🏭 Multi-Node Monitoring System (ESP-NOW)
+# 🏭 Multi-Node Monitoring (ESP-NOW)
 
 An monitoring system based on an **ESP-NOW** local wireless network utilizing ESP32 microcontrollers. This system is designed to monitor operational processes across two machine units in real-time. The network implements a **4-to-1 Star Topology**, where four independent sender nodes periodically transmit telemetry data to a single centralized receiver station (*Central Receiver*).
 
