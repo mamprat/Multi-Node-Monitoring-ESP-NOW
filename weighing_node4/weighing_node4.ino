@@ -1,4 +1,4 @@
-///timbangan mc1
+///timbangan mc2
 
 #include <WiFi.h>
 #include <esp_now.h>
@@ -81,7 +81,7 @@ void loop() {
     
     // Debug ke Serial Monitor Sender
     Serial.print("Node 4 - Berat: "); 
-    Serial.print(currentWeight, 3);
+    Serial.print(currentWeight, 4);
     
     if (result == ESP_OK) {
       Serial.println(" [OK - Terkirim]");
