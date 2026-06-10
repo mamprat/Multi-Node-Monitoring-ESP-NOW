@@ -14,7 +14,7 @@ typedef struct {
   bool headB_emergency;
   uint8_t headB_state;
   unsigned long timestamp;
-} ButtonPacket;
+} DataPacket;
 
 typedef struct {
   uint8_t nodeID;
@@ -24,9 +24,9 @@ typedef struct {
 #pragma pack(pop)
 
 // ===================== GLOBAL VAR =====================
-ButtonPacket dataNode1;  // MC1 - tombol
+DataPacket dataNode1;  // MC1 - tombol
 WeightPacket dataNode3;  // MC1 - timbangan
-ButtonPacket dataNode2;  // MC2 - tombol
+DataPacket dataNode2;  // MC2 - tombol
 WeightPacket dataNode4;  // MC2 - timbangan
 
 const char* s(bool v) { return v ? "1" : "0"; }
@@ -43,6 +43,12 @@ void setup() {
   initEspNow();  // fungsi di espnow_cb.ino
 }
 
+unsigned long lastPrint = 0;
+
 void loop() {
-  // kosong
+  if (millis() - lastPrint >= 500) {
+    printMC1();
+    printMC2();
+    lastPrint = millis();
+  }
 }
