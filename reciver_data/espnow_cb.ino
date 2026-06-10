@@ -7,7 +7,7 @@ void initEspNow() {
   Serial.println("ESP-NOW OK");
 }
 
-void OnDataRecv(const esp_now_recv_info_t *info, const uint8_t *incomingData, int len) {
+void OnDataRecv(const uint8_t *mac_addr, const uint8_t *incomingData, int len) {
   uint8_t id = incomingData[0];
 
   switch (id) {
